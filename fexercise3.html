@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function countBs(string) {
+            let result = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] == 'B')
+                    result += 1;
+            }
+            return result;
+        }
+
+        alert(countBs("ALIBABA BARDZO luBił koBiety"));
+
+        function countChar(string, char) {
+            let result = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] == char)
+                    result += 1;
+            }
+            return result;
+        }
+
+        alert(countChar("ALIBABA BARDZO luBił koBiety", 'A'));
+    </script>
+</body>
+
+</html>
