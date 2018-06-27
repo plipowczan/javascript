@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const testFun1 = function (a, b) {
+            return a + b;
+        };
+
+        function testFun2(a, b) {
+            return a - b;
+        };
+
+        let a = 3;
+        let b = 2;
+        console.log(testFun1(a, b));
+        console.log(testFun2(a, b));
+        const testFun3 = testFun1;
+        const testFun4 = testFun2;
+        console.log(testFun3(a, b));
+        console.log(testFun4(a, b));
+
+        const testFun5 = (a, b) => {
+            return a * b;
+        }
+        console.log(testFun5(a, b));
+        const testFun6 = () => {
+            console.log("Test");
+        }
+        testFun6();
+
+        const testFun7 = a => {
+            console.log("Test " + a);
+        }
+
+        testFun7("numer 7");
+
+        function wrapValue(n) {
+            let local = n; return () => local;
+        }
+
+        const wrap1 = wrapValue(1);
+        const wrap2 = wrapValue(2);
+        console.log(wrap1());
+        console.log(wrap2());
+
+        function multiplier(factor) {
+            return number => number * factor;
+        }
+        let twice = multiplier(2);
+        console.log(multiplier(2));
+        console.log(twice(5));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
