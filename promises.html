@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1042, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+
+        function constructPromise() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(resolve, 2000);
+            });
+        }
+
+
+        constructPromise().then(function () {
+            console.log("Connecting to the database");
+            return constructPromise();
+        }).then(function () {
+            console.log("Getting data");
+            return constructPromise();
+        }).then(function () {
+            console.log("Transforming data");
+            return constructPromise();
+        }).then(function () {
+            console.log("Initializing transaction");
+            return constructPromise();
+        }).then(function () {
+            console.log("Sending data");
+            return constructPromise();
+        })
+
+    </script>
+</body>
+
+</html>
