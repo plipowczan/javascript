@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button click alert excercise</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <input id="button1" type="submit" placeholder="Test" value="Test"/>
+    <script>
+        $("#button1").click(function(event)
+        {
+            alert("Button clicked");
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

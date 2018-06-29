@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+        <form id=demo>
+                <input type="text" name="name" id="name" placeholder="Name"/>
+                <input type="submit">
+            </form>
+
+            <script>
+                    document.getElementById("demo").onsubmit = function()
+                    {
+                        alert("Hello " + document.getElementById("name").value);
+                    };
+                </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Input Alert excercise</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <input type="text" name="Text" id="text1"/>
+        <input id="button1" type="submit" placeholder="Test" value="Test"/>
+        <script>
+            $("#button1").click(function(event)
+            {
+                alert("Entered text: " + $("#text1").val());
+                event.preventDefault();
+            });
+        </script>
+</body>
+</html>

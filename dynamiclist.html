@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic list excercise</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="Text" id="text1" />
+    <input id="button1" type="submit" placeholder="Test" value="Dodaj element" />
+    <br>
+    <ol id="fruitList"></ol>
+
+    <script>
+        list = $("#fruitList");
+        if (!localStorage.getItem('fruitList')) {
+                localStorage.setItem('fruitList', JSON.stringify([]));
+        }
+
+        var fruitList = JSON.parse(localStorage.getItem("fruitList"));
+
+        console.log("List of fruits");
+        console.log(fruitList);
+
+        $.each(fruitList, function(index, value)
+        {
+            $("<li/>").text(value).appendTo(list);
+        });
+        
+        $("#button1").click(function (event) {
+            $("<li/>").text($("#text1").val()).appendTo(list);
+            fruitList.push($("#text1").val());
+            localStorage.setItem('fruitList', JSON.stringify(fruitList));
+            console.log("Added fruit");
+            console.log(fruitList);
+            console.log(JSON.stringify(fruitList));
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

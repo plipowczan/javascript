@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reversing an array</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <script>
+        var simpleArray = [1,2,3,4,5];
+
+       function reverse(array)
+       {
+           var newArray = [];
+
+            for (let i = array.length-1; i >= 0; i--) {
+                newArray.push(array[i])
+            }
+            return newArray;
+       }
+
+       console.log(reverse(simpleArray));
+    </script>
+</body>
+</html>

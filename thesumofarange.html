@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The sum of a range</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <script>
+        function range(start, end, step)
+        {
+            var array = [];
+
+            for (let i = start; i <= end; i+=step) {
+                array.push(i);
+            }
+
+            return array;
+        }
+
+        function sum(array)
+        {
+            var sum = 0;
+            $.each(array, function(index, value)
+            {
+                sum += value;
+            });
+            return sum;
+        }
+
+        console.log(range(1,10,2));
+        console.log(sum(range(1,10,2)));
+    </script>
+</body>
+</html>
