@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Storage</title>
+</head>
+
+<body>
+    <script>
+
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+        }
+        document.write(localStorage.getItem('counter'));
+        localStorage.setItem('counter', parseInt(localStorage.getItem('counter')) + 1);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 2</title>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#demo').submit(function (event) {
+                alert('hello, ' + $('#name').val() + '!');
+                event.preventDefault();
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <form id="demo">
+        <input id="name" placeholder="Name" type="text" />
+        <input type="submit" />
+    </form>
+
+</body>
+
+</html>
